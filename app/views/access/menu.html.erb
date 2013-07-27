@@ -1,0 +1,30 @@
+<% @page_title = "Admin Menu" %>
+
+		<div id="login-inner">
+
+			<div id="login-circle">
+				<section id="login-form" class="login-inner-form active" data-angle="0">
+					<br>
+					<br>
+					<br>
+					<br>
+				<center>	<h1>Admin Menu</h1>
+					 <ul>
+    <li><%= link_to("Manage Subjects", :controller => 'subjects') %></li>
+    <br>
+    <li><%= link_to("Manage Pages", :controller => 'pages') %></li>
+    <br>
+    <li><%= link_to("Manage Sections", :controller => 'sections') %></li>
+    <br>
+    <li><%= link_to("Manage Admin Users", '#') %></li>
+    <br>
+    <li><%= link_to("Logout", :action => 'logout') %></li>
+  </ul> 
+  <br>
+  <br>
+  <br>
+  <br>
+					
+							</section>
+
+</center>

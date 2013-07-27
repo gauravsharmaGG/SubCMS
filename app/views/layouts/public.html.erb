@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Simple CMS <%= "| #{@page_title}" if @page_title %></title>
+    <meta name="author" content="Gaurav Sharma">
+    <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+        
+<script type="text/javascript">
+  var flashvars = {};
+  flashvars.cssSource = "css/piecemaker.css";
+  flashvars.xmlSource = "piecemaker.xml";
+	
+  var params = {};
+  params.play = "true";
+  params.menu = "false";
+  params.scale = "showall";
+  params.wmode = "transparent";
+  params.allowfullscreen = "true";
+  params.allowscriptaccess = "always";
+  params.allownetworking = "all";
+  
+  swfobject.embedSWF('piecemaker.swf', 'piecemaker', '960', '440', '10', null, flashvars,    
+  params, null);
+
+</script>
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script> 
+</head>
+
+<body>
+
+<div id="templatemo_header_wrapper">
+    <div id="templatemo_header">
+        <div id="site_title"><a href="#">Sub<span>CMS</span></a></div>
+        <div id="templatemo_menu" class="ddsmoothmenu">
+           <%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+            <br style="clear: left" />
+        </div> <!-- end of templatemo_menu -->
+    </div> <!-- END of header -->
+</div>
+
+<div id="templatemo_middle_wrapper">
+	<div id="templatemo_middle">
+        <div id="piecemaker">
+        
+        </div>
+	</div>
+</div> <!-- END of slider -->
+
+<%= yield %>
+
+
+    <div class="cleaner"></div>
+</div> <!-- END of main -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+	
+        <div class="col col_14">
+        	<h5>Follow Us</h5>	
+            <ul class="footer_list">
+                <li><a href="#" class="social facebook">Facebook</a></li>
+                <li><a href="#" class="social twitter">Twitter</a></li>
+                <li><a href="#" class="social feed">Feed</a></li>
+			</ul>
+            
+        </div>
+        <div class="col col_14">
+        	<ul class="footer_list">
+                <li></li>
+                
+			</ul>
+            
+        	</div>
+        	
+        	<div class="col col_14">
+        		<ul class="footer_list">
+                <li></li>
+                
+			</ul>
+            
+        		</div>
+        
+        <div class="col col_14 no_margin_right" align="right">
+        	<h5>Newsletter</h5>
+            <form action="#" method="get">
+              <input type="text" value="Subscribe" name="email" id="email" title="email" onfocus="clearText(this)" onblur="clearText(this)" class="newsletter_txt" />
+              <input type="submit" name="Subscribe" value=" Subscribe " alt="Subscribe" id="subscribe_button" title="Subscribe" class="subscribe_button"  />
+            </form>
+            <div class="cleaner h30"></div>
+            Copyright © 2013 <a href="#">SubCMS</a> Designed by <a href="#" target="_parent">SubCMS</a>
+        </div>
+        </div>
+    <div class="cleaner"></div>
+    </div>
+</div> <!-- END of footer -->
+
+
+        
+    <div id="footer">
+      <p id="copyright">&copy; SubCms / Gaurav Sharma</p>
+    </div>
+  </body>
+</html>

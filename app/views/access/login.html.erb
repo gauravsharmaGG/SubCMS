@@ -1,0 +1,48 @@
+
+		<div id="login-inner">
+
+			<div id="login-circle">
+				<section id="login-form" class="login-inner-form active" data-angle="0">
+				<center>	<h1>Login</h1>
+					  <%= form_tag(:action => 'authorize_login') do %>
+  <table>
+  		<div class="control-group">
+    <tr>
+      <td><%= label_tag(:username) %></td>
+      <td><%= text_field_tag(:username) %></td>
+    </tr>
+    <tr>
+      <td><%= label_tag(:password) %></td>
+      <td><%= password_field_tag(:password) %></td>
+    </tr>
+    </div>
+    <tr>
+      <td>&nbsp;</td>
+      <div class="form-actions">
+      <td><button type="submit" class="btn btn-danger btn-block btn-large">Log In</button></td>
+      </div>
+    </tr>
+  </table>
+  <% end %>
+					
+							</section>
+				<section id="register-form" class="login-inner-form" data-angle="90">
+					<h1>About GemsAir</h1>
+					About us
+				</section>
+				<section id="forget-form" class="login-inner-form" data-angle="180">
+					<h1>Reset Password</h1>
+					<form class="form-vertical" action="#">
+						<div class="control-group">
+							<div class="controls">
+								<input type="text" class="big" placeholder="Enter Your Email...">
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-danger btn-block btn-large">Reset</button>
+						</div>
+					</form>
+				</section>
+			</div>
+
+</center>
